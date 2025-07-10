@@ -2,7 +2,7 @@
 
 """
 LeetCode Problem: 2379. minimum-recolors-to-get-k-consecutive-black-blocks
-Difficulty: M
+Difficulty: E
 Link: https://leetcode.cn/problems/minimum-recolors-to-get-k-consecutive-black-blocks/description/
 
 Author: VastEpiphany
