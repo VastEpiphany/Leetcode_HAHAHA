@@ -16,7 +16,7 @@ class Solution:
     '''
     可行但是太菜了，很容易超时
 
-    还是注意滑动窗口的思想，只计算一次sum，然后移动首尾元素（像Queue那样)
+    还是注意滑动窗口的思想，只计算一次sum，然后移动首尾元素（像Queue队列那样)
     '''
     def getAverages(self, nums: List[int], k: int) -> List[int]:
         avgs = []
