@@ -35,10 +35,11 @@ class Solution:
 
         return ans
     
-class BetterSolution:
+class BetterSolution1:
     '''
     1. 考虑一下我们的stack可以存什么，不一定是ind和val都存吧？ 所以可以只存index
     2. stack中对应的温度应该是从左向右递减的（bottom->top）
+    3. 本做法是从左到右进行循环遍历的一种做法
     '''
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
         stack = []
@@ -48,15 +49,32 @@ class BetterSolution:
             while stack and v > temperatures[stack[-1]]:
                 ans[stack[-1]] = i - stack[-1]
                 stack.pop()
+            
+            stack.append(i)
+        return ans
+
+class BetterSolution2:
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        n = len(temperatures)
+        stack = []
+        ans = [0] * n
+
+        for i in  range(n-1,-1,-1):
+            while stack and temperatures[i] >= temperatures[stack[-1]]:
+                stack.pop()
+            
+            if stack:
+                ans[i] = stack[-1] - i
             stack.append(i)
 
         return ans
-
-
 
 if __name__ == '__main__':
     sol = Solution()
     print(sol.dailyTemperatures([73,74,75,71,69,72,76,73]))
 
-    sol1 = BetterSolution()
+    sol1 = BetterSolution1()
     print(sol1.dailyTemperatures([73,74,75,71,69,72,76,73]))
+
+    sol2 = BetterSolution2()
+    print(sol2.dailyTemperatures([73,74,75,71,69,72,76,73]))
