@@ -1,0 +1,19 @@
+{
+	
+	"MyLeetcode":{
+		"prefix": "myleetcode",
+		"body": [
+			"# -*- encoding: utf-8 -*-",
+			"\"\"\"",
+			"LeetCode Problem: ${1:Problem Title}",
+			"Difficulty: Easy/Medium/Hard",
+			"Tags: Array/String/Linked List/Tree/Graph/DP/Backtracking",
+			"Link: ",
+			"Author: VastEpiphany",
+			"Date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+			"",
+			"\"\"\"",
+		],
+		"description": "Template for LeetCode problems in Python"
+	}
+}
